@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iglesia Evangelica "Zalmedina" - Inicio</title>
+  <style>
+    /* Reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* Header y navegación */
+    header { background: #f4f4f4; padding: 1rem 2rem; position: fixed; width: 100%; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .container { max-width: 1200px; margin: auto; }
+    .logo { font-size: 1.5rem; font-weight: bold; color: #2c3e50; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .nav-links { display: flex; gap: 1rem; }
+    .nav-links a { padding: 0.5rem; transition: background .3s; }
+    .nav-links a:hover { background: #e2e2e2; border-radius: 4px; }
+    .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+
+    /* Hero */
+    .hero { height: 100vh; background: url('https://source.unsplash.com/featured/?church') center/cover no-repeat; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.7); }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; }
+
+    /* Secciones */
+    section { padding: 4rem 2rem; }
+    .about, .events { background: #fafafa; }
+    .about .container, .events .container { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; }
+    .about img { max-width: 400px; width: 100%; border-radius: 8px; }
+    .about-text { flex: 1; }
+    .events .event-item { background: white; padding: 1rem; border-radius: 6px; flex: 1; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+
+    /* Footer */
+    footer { background: #2c3e50; color: white; text-align: center; padding: 1rem; }
+    footer a { color: #ecf0f1; margin: 0 0.5rem; }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; background: #f4f4f4; position: absolute; top: 60px; right: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+      .nav-links.active { display: flex; }
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="logo">Iglesia Zalmedina</div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#sermones">Sermones</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div style="text-align: center; padding: 0 1rem;">
+      <h1>Bienvenidos a Iglesia Zalmedina</h1>
+      <p>Un lugar donde la fe y la comunidad se unen</p>
+    </div>
+  </section>
+
+  <section class="about" id="nosotros">
+    <div class="container">
+      <img src="https://source.unsplash.com/featured/?community,church" alt="Nosotros">
+      <div class="about-text">
+        <h2>¿Quiénes Somos?</h2>
+        <p>La Iglesia Zalmedina es una congregación evangelica comprometida con compartir el mensaje de esperanza y amor de Jesucristo. Ofrecemos servicios semanales, estudios bíblicos y actividades para todas las edades.</p>
+        <a href="#" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: #2c3e50; color: white; border-radius: 4px;">Conoce más</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="events" id="eventos">
+    <div class="container">
+      <h2 style="width: 100%; text-align: center; margin-bottom: 2rem;">Próximos Eventos</h2>
+      <div class="event-item">
+        <h3>Servicio Dominical</h3>
+        <p>Domingo 20 de Abril - 10:00 AM</p>
+      </div>
+      <div class="event-item">
+        <h3>Estudio Bíblico</h3>
+        <p>Miércoles 23 de Abril - 7:30 PM</p>
+      </div>
+      <div class="event-item">
+        <h3>Noche de Alabanza</h3>
+        <p>Viernes 25 de Abril - 8:00 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container" style="text-align: center;">
+      <h2>Contacto</h2>
+      <p>Dirección: Calle Ejemplo 123, Ciudad</p>
+      <p>Teléfono: +34 123 456 789</p>
+      <p>Email: contacto@iglesialaluz.org</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Iglesia Zalmedina | <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a></p>
+  </footer>
+
+  <script>
+    // Toggle menú móvil
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
